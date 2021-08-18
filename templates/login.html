@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="static/img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="codepixer">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>RecruiTECH - Login</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="static/styles/linearicons.css">
+			<link rel="stylesheet" href="static/styles/font-awesome.min.css">
+			<link rel="stylesheet" href="static/styles/bootstrap.css">
+			<link rel="stylesheet" href="static/styles/magnific-popup.css">
+			<link rel="stylesheet" href="static/styles/nice-select.css">
+			<link rel="stylesheet" href="static/styles/animate.min.css">
+			<link rel="stylesheet" href="static/styles/owl.carousel.css">
+			<link rel="stylesheet" href="static/styles/main.css">
+		</head>
+		<body>
+
+			  <header id="header" id="home">
+			    <div class="container">
+			    	<div class="row align-items-center justify-content-between d-flex">
+				      <div id="logo">
+				        <!--<a href="index.html"><img src="img/logo.png" alt="" title="" /></a>-->
+				      </div>
+				      <nav id="nav-menu-container">
+				        <ul class="nav-menu">
+				          <li class="menu-active"><a href="{{url_for('index')}}">Home</a></li>
+				      	</ul>
+				      </nav><!-- #nav-menu-container -->		    		
+			    	</div>
+			    </div>
+			  </header><!-- #header -->
+
+
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home" style="height: 350px;">	
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Please Login to your Account !			
+							</h1>
+							<h2 class="text-white" style="margin-top: 20px; margin-bottom: ">
+								I am a...			
+							</h2>	
+						</div>											
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->	
+			<section class="features-area" style="margin-bottom: 20px;">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-md-12 col-sm-6">
+							<div class="single-fcat">
+								<a href="{{url_for('login_candidate')}}">
+									<img src="static/img/job.png" alt="" style="height: 100px; width: 100px;">
+								</a>
+								<p>Candidate</p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-12 col-sm-6">
+							<div class="single-fcat">
+								<a href="{{url_for('login_recruiter')}}">
+									<img src="static/img/recruitment.png" alt="" style="height: 100px; width: 100px;">
+								</a>
+								<p>Recruiter</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<footer class="footer-area section-gap">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3  col-md-12">
+							<div class="single-footer-widget">
+								<h6>Top Services</h6>
+								<ul class="footer-nav">
+									<li>Most Suitable Job Listings</li>
+									<li>Infographic CV</li>
+									<li>Aptitude Tests</li>
+									<li>Personality Tests</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3  col-md-12">
+							<div class="single-footer-widget newsletter">
+								<h6>Contact Details</h6>
+								<li>Mrigank Sharma, +91 8758122463</li>
+									<li>Sanskar Syal, +91 8989509696</li>
+									<li>Khushi Thakkar, +91 9958055020</li>
+
+							</div>
+						</div>
+
+						<div class="col-lg-6  col-md-12">
+							<div class="single-footer-widget mail-chimp">
+								<h6 class="mb-20">About Us</h6>
+								<div id="logo" style="margin-bottom: 20px;">
+				        			<a href="index.html"><img src="static/img/logo.png" alt="" title="" /></a>
+				      			</div>
+								<p style="text-align: justify;">
+								We are a group of students currently studying in the 4th year of MBA Tech IT (Information Technology) from Mukesh Patel School Of Technology Management and Engineering.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="row footer-bottom d-flex justify-content-between">
+						<p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved by RecruiTECH</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						</p>
+						<!--<div class="col-lg-4 col-sm-12 footer-social">
+							<a href="www.facebook.com"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+							<a href="#"><i class="fa fa-behance"></i></a>
+						</div>-->
+					</div>
+				</div>
+			</footer>
+			<!-- End footer Area -->
+
+			<script src="static/js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="static/js/vendor/bootstrap.min.js"></script>
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src="static/js/easing.min.js"></script>
+			<script src="static/js/hoverIntent.js"></script>
+			<script src="static/js/superfish.min.js"></script>
+			<script src="static/js/jquery.ajaxchimp.min.js"></script>
+			<script src="static/js/jquery.magnific-popup.min.js"></script>
+			<script src="static/js/owl.carousel.min.js"></script>
+			<script src="static/js/jquery.sticky.js"></script>
+			<script src="static/js/jquery.nice-select.min.js"></script>
+			<script src="static/js/parallax.min.js"></script>
+			<script src="static/js/mail-script.js"></script>
+			<script src="static/js/main.js"></script>
+		</body>
+	</html>
+

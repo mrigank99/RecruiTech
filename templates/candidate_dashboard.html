@@ -1,0 +1,236 @@
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="static/img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="codepixer">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>RecruiTECH</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+			<!--
+			CSS
+			============================================= -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/linearicons.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/font-awesome.min.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/bootstrap.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/magnific-popup.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/nice-select.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/animate.min.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/owl.carousel.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+		</head>
+		<body>
+		{% include "header.html" %}
+			 <!-- <header id="header" id="home">
+			    <div class="container">
+			    	<div class="row align-items-center justify-content-between d-flex">
+				      <div id="logo">
+
+				      </div>
+				      <nav id="nav-menu-container">
+				        <ul class="nav-menu">
+				          <li class="menu-active"><a href="{{url_for('candidate_dashboard')}}">Home</a></li>
+				          <li><a href="{{url_for('candidate_profile')}}">My Profile</a></li>
+				          <li><a href="{{url_for('candidate_job_search')}}">Search</a></li>
+				         <li><a href="{{url_for('apptitude')}}">Psychometric Test</a></li>
+
+				          <li><a href="{{url_for('candidate_about_us')}}">About Us</a></li>
+				          <li><a href="{{url_for('candidate_contact')}}">Contact</a></li>
+				          <li><a href="{{url_for('logout')}}">Logout</a></li>
+				        </ul>
+				      </nav>
+			    	</div>
+			    </div>
+			  </header>-->
+
+
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home" style="height: 500px;">
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12" style="padding-bottom: 40px; padding-top: 100px;">
+							<div class="thumb">
+						        <img class="img-fluid" src="{{ url_for('static', filename=filename) }}" onerror="this.src='/static/img/profile.png'" alt="" style="width: 200px; height: 200px; border-radius: 100px;">
+						    </div>
+						</div>										
+					</div>
+
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="col-lg-6">
+							<div class="single-feature" style="height: 120px;">
+								<h4 style="padding-bottom: 0px;">Welcome {{ current_user.first_name }}</h4>
+								<p style="padding-top: 10px;">Search for the perfect job, within a few minutes.</p>
+							</div>
+						</div>		
+																							
+					</div> 
+				</div>
+			</section>
+			<!-- End banner Area -->	
+
+			<section class="features-area" style="margin-bottom: 20px;">
+				<div class="container">
+					<div class="row">
+
+						<div class="col-lg-6 col-md-12">
+							<div class="single-feature" style="margin-top: 75px; height: 70px; padding-top: 10px;">
+								<a href="{{url_for('candidate_applications')}}">
+								<div class="row">
+									<div class="col-lg-4" style="margin-top: 0px; padding-top: 0px;">
+										<img src="static/img/bell.png" alt="" style="height: 50px; width: 50px;">
+									</div>
+									<div class="col-lg-4" style="padding-top: 15px;">
+										<h4>Applied Jobs</h4>
+									</div>
+									<div class="col-lg-4" style="padding-top: 15px;">
+										<h4>{{ total_applications }}</h4>
+									</div>
+								</div>
+							</a>
+							</div>
+						</div>
+
+						<div class="col-lg-6 col-md-12">
+							<div class="single-feature" style="margin-top: 75px; height: 70px; padding-top: 10px;">
+								<a href="{{url_for('candidate_job_search')}}">
+								<div class="row">
+									<div class="col-lg-4" style="margin-top: 0px; padding-top: 0px;">
+										<img src="static/img/tie.png" alt="" style="height: 50px; width: 50px;">
+									</div>
+									<div class="col-lg-4" style="padding-top: 15px;">
+										<h4>Jobs for Me</h4>
+									</div>
+									<div class="col-lg-4" style="padding-top: 15px;">
+										<h4>100</h4>
+									</div>
+								</div>
+							</a>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</section>
+
+			<section class="price-area section-gap" id="price">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-30 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">What do you want to do today?</h1>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+
+						<div class="col-md-3" style="max-width: 25%">
+							<div class="single-price no-padding">
+								<div class="price-top">
+									<h4>Build Your Profile</h4>
+								</div>
+								<div class="price-bottom">
+									<div class="price-wrap d-flex flex-row justify-content-center">
+										<a href="{{url_for('candidate_profile')}}">
+											<img src="static/img/profile.png" alt="" style="height: 100px; width: 100px;">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-3" style="max-width: 25%">
+							<div class="single-price no-padding">
+								<div class="price-top">
+									<h4>Search for Jobs</h4>
+								</div>
+								<div class="price-bottom">
+									<div class="price-wrap d-flex flex-row justify-content-center">
+										<a href="{{url_for('candidate_job_search')}}">
+											<img src="static/img/job-search.png" alt="" style="height: 100px; width: 100px;">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-3" style="max-width: 25%">
+							<div class="single-price no-padding">
+								<div class="price-top">
+									<h4>Build CV</h4>
+								</div>
+								<div class="price-bottom">
+									<div class="price-wrap d-flex flex-row justify-content-center">
+										<a href="{{url_for('infographic_cv',id=current_user.id)}}">
+											<img src="static/img/cv.png" alt="" style="height: 100px; width: 100px;">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-3" style="max-width: 25%">
+							<div class="single-price no-padding">
+								<div class="price-top">
+									<h4>Psychometric Test</h4>
+								</div>
+								<div class="price-bottom">
+									<div class="price-wrap d-flex flex-row justify-content-center">
+										<a href="{{url_for('apptitude')}}">
+											<img src="static/img/checklist.png" alt="" style="height: 100px; width: 100px;">
+										</a>
+									</div>
+								</div>
+							</div>				
+						</div>			
+
+						<!--<div class="col-md-3" style="max-width: 20%">
+							<div class="single-price no-padding">
+								<div class="price-top">
+									<h4>Personality Test</h4>
+								</div>
+								<div class="price-bottom">
+									<div class="price-wrap d-flex flex-row justify-content-center">
+										<a href="">
+											<img src="static/img/personality-search.png" alt="" style="height: 100px; width: 100px;">
+										</a>
+									</div>
+								</div>
+							</div>				
+						</div>	-->
+					</div>
+				</div>	
+			</section>					
+
+			 {% include "footer.html" %}
+
+		<script src="{{ url_for('static', filename='js/vendor/jquery-2.2.4.min.js') }}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="{{ url_for('static', filename='js/vendor/bootstrap.min.js') }}"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+		<script src="{{ url_for('static', filename='js/easing.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/hoverIntent.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/superfish.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.ajaxchimp.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.nice-select.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/parallax.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/mail-script.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+		</body>
+	</html>
+
+
+

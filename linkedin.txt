@@ -1,0 +1,75 @@
+Name is: Khushi Thakkar
+Headline is: 4th year student - MBA Tech (IT), MPSTME, NMIMS
+Location is: Mumbai, Maharashtra, India
+About the person: 4th year student of 5 years integrated program of B.Tech. (IT), MBA at MPSTME, NMIMS.
+
+ Experience 
+ Intern
+Company Name
+MedTourEasy Internship
+Dates Employed
+Apr 2020 – Jun 2020
+Employment Duration
+3 mos
+Worked in the data visualization field to collect & analyse data; and create user interactive dashboards on COVID-19. Created COVID-19 worldwide and testing tracker to gain meaningful insights. Leveraged PowerBI, Tableau and R.
+Intern
+Company Name
+Deloitte
+Dates Employed
+May 2019 – Jun 2019
+Employment Duration
+2 mos
+Location
+Mumbai Area, India
+5 weeks internship in Cyber Risk team - Risk Advisory for development of Dashbaords and Data Analytics. Also, acquired additional knowledge on External Vulnerability Assessment testing.
+
+ Education 
+ Education
+SVKM's Narsee Monjee Institute of Management Studies (NMIMS)
+Degree Name
+MBA (Tech)
+Field Of Study
+Information Technology
+Grade
+3.81/4.00 (Cumulative Grade Point Assessment)
+Dates attended or expected graduation
+2017 – 2022
+Activities and Societies: Finance committee, Worked on various projects like 'Constructed Wetlands', Development of websites
+Delhi Public School, Sushant Lok
+Degree Name
+XII CBSE, Science
+Field Of Study
+PCM
+Grade
+96.2%
+Dates attended or expected graduation
+2016 – 2017
+Delhi Public School, Sushant Lok
+Degree Name
+X CBSE
+Field Of Study
+Science
+Grade
+10 CGPA
+Dates attended or expected graduation
+2014 – 2015
+
+ Certification 
+ Data Science Orientation
+Issuing authority
+Coursera
+Issued date and, if applicable, expiration date of the certification or license
+Issued Sep 2020No Expiration Date
+See credential
+Building Batch Data Pipelines on GCP
+Issuing authority
+Coursera
+Issued date and, if applicable, expiration date of the certification or license
+Issued Apr 2020No Expiration Date
+See credential
+Building Resilient Streaming Analytics Systems on GCP
+Issuing authority
+Coursera
+Issued date and, if applicable, expiration date of the certification or license
+Issued Apr 2020No Expiration Date
+See credential

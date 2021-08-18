@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="static/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!--<script src= "https://smtpjs.com/v3/smtp.js"> </script>
+
+    <script type="text/javascript">
+
+    var x = $('signup_candidate_form').serializeArray()
+    console.log(x)
+    var cand_email = x["candidate_email"].value;
+    var random = Math.floor(Math.random() * 10000)
+
+    function sendEmail() {
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "techproject2022@gmail.com",
+        Password: "mrisakhu@1234",
+        To: "khushithakkar.nmims@gmail.com",
+        From: "techproject2022@gmail.com",
+        Subject: "OTP Verification for RecruiTECH",
+        Body: "Your OTP is: "+random,
+      })
+        .then(function (message) {
+          alert("Mail sent successfully")
+        });
+    }
+  </script>-->
+</head>
+<body>
+    <div class="main">
+
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+
+                    <form method="POST" name="signup_candidate_form" id="signup_candidate_form" class="signup-form"
+                          action="{{url_for('candidate_sign')}}">
+                        <h2 class="form-title">Create account</h2>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="first_name" id="first_name" placeholder="Your First Name" required/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="last_name" id="last_name" placeholder="Your Last Name" required/>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" name="candidate_email" id="candidate_email" placeholder="Your Email" required/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="candidate_password" id="candidate_password" placeholder="Password" required/>
+                            <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-input" name="re_password" id="re_password" placeholder="Repeat your password" required/>
+                        </div>
+
+                       <!-- <div class="form-group">
+                            <input type="submit" name="verify_candidate" id="verify" class="form-submit" value="Verify" onclick="sendEmail()"/>
+                        </div>-->
+
+                        <div class="form-group">
+                            <input type="submit" name="submit_candidate" id="submit" class="form-submit" value="Sign up"/>
+                        </div>
+                    </form>
+                    <p class="loginhere" style="margin-top:0px;">
+                        Have already an account ? <a href="{{url_for('login_candidate')}}" class="loginhere-link">Login here</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

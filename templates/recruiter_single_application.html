@@ -1,0 +1,191 @@
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="static/img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="codepixer">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>RecruiTECH</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="{{ url_for('static', filename='styles/linearicons.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/font-awesome.min.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/bootstrap.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/magnific-popup.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/nice-select.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/animate.min.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/owl.carousel.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+
+		</head>
+		<body>
+
+				   {% include "headerrecruiter.html" %}
+
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">	
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Applications for "{{ jobName }}"
+							</h1>	
+						</div>											
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->
+
+			<section class="post-area section-gap" style="padding-bottom: 0px; margin-bottom: 0px;">	
+				<div class="container">
+					<div class="row search-page-top d-flex align-items-center justify-content-center" style="padding: 0px 0px;">
+						<div class="banner-content col-lg-12" style="margin-top: -50px;">
+							<form action="#" class="serach-form-area">
+								<div class="row justify-content-center form-wrap">
+									<div class="col-lg-2 form-cols">
+										<div class="default-select" id="default-selects">
+											<select>
+												<option value="1">Location</option>
+												<option value="2">Mumbai</option>
+												<option value="3">Delhi</option>
+												<option value="4">Bangalore</option>
+												<option value="5">Hyderabad</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="col-lg-2 form-cols">
+										<div class="default-select" id="default-selects">
+											<select>
+												<option value="1">Experience</option>
+												<option value="2">0-2</option>
+												<option value="3">3-6</option>
+												<option value="4">6-10</option>
+												<option value="5">10-15</option>
+												<option value="5">15-20</option>
+												<option value="5">>20</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="col-lg-2 form-cols">
+										<div class="default-select" id="default-selects2">
+											<select>
+												<option value="1">Education Level</option>
+												<option value="2">Post Graduate</option>
+												<option value="3">Graduate</option>
+												<option value="4">Ph.D. and Equivalent</option>
+												<option value="5">Undergraduate</option>
+											</select>
+										</div>										
+									</div>
+
+									<div class="col-lg-2 form-cols">
+										<div class="default-select" id="default-selects2">
+											<select>
+												<option value="1">Required Skills</option>
+												<option value="2">Python</option>
+												<option value="3">Java</option>
+												<option value="4">PowerBI</option>
+												<option value="5">MySQL</option>
+											</select>
+										</div>										
+									</div>
+
+									<div class="col-lg-2 form-cols">
+										<div class="default-select" id="default-selects2">
+											<select>
+												<option value="1">Age</option>
+												<option value="2">23-30</option>
+												<option value="3">31-40</option>
+												<option value="4">41-50</option>
+												<option value="5">> 50</option>
+											</select>
+										</div>										
+									</div>
+
+
+									<div class="col-lg-2 form-cols">
+									    <button type="button" class="btn btn-info">
+									      <span class="lnr lnr-magnifier"></span> Search
+									    </button>
+									</div>								
+								</div>
+							</form>	
+						</div>
+					</div>
+				</div>
+			</section>	
+
+			<section class="post-area section-gap" style="padding-bottom: 0px; margin-bottom: 0px;">	
+				<div class="container">
+					<div class="row search-page-top d-flex align-items-center justify-content-center" style="padding: 0px 0px;">
+						<div class="banner-content col-lg-12" style="margin-top: -70px;">
+							<div class="section-top-border">
+								<table class="table table-hover">
+								  <thead class="thead-dark">
+									<tr>
+									  <th scope="col">S.No</th>
+									  <th scope="col">Name</th>
+									  <th scope="col">Email</th>
+									  <th scope="col">Contact</th>
+									  <th scope="col">Qualification</th>
+									  <th scope="col"></th>
+									</tr>
+								  </thead>
+								  <tbody>
+									{% for candidate in details %}
+									<tr>
+									  <th scope="row">{{ loop.index }}</th>
+									  <td>{{ candidate[1] }} {{ candidate[2] }}</td>
+									  <td>{{ candidate[3] }}</td>
+									  <td>{{ candidate[4] }}</td>
+									  <td>{{ candidate[5] }}</td>
+									  <td><a href="{{url_for('infographic_cv',id=candidate[6])}}"
+											 class="genric-btn primary radius">View Profile</a></td>
+									</tr>
+								  {% endfor %}
+								  </tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			 {% include "footer.html" %}
+
+			<script src="{{ url_for('static', filename='js/vendor/jquery-2.2.4.min.js') }}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="{{ url_for('static', filename='js/vendor/bootstrap.min.js') }}"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+		<script src="{{ url_for('static', filename='js/easing.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/hoverIntent.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/superfish.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.ajaxchimp.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.nice-select.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/parallax.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/mail-script.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+		</body>
+	</html>
+
+
+

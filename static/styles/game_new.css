@@ -1,0 +1,114 @@
+.choice-container {
+  display: flex;
+  width: 120%;
+  font-size: 15px;
+  border: 0.1rem solid rgb(86, 165, 235, 0.25);
+  background-color: white;
+}
+
+.choice-container:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+}
+
+.choice-prefix {
+  padding: 10px 20px;
+  margin-bottom: 0px;
+  background-color: #795fff;
+  color: white;
+}
+
+.choice-text {
+  margin-bottom: 0px;
+  padding: 10px;
+  width: 100%;
+}
+
+.sections{
+  border-color: black;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  transform: skew(-20deg);
+}
+
+.active-section{
+background-image: linear-gradient( 109.6deg,  rgba(238,58,136,1) 11.2%, rgba(128,162,245,1) 91.1% );
+}
+
+/* Other Program classes */
+
+.slide{
+  position: absolute;
+  width: 80%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.active-slide{
+  opacity: 1;
+  z-index: 2;
+}
+
+.quiz-container{
+  position: relative;
+  height: 200px;
+  margin-top: 40px;
+}
+
+.question{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.answers {
+  margin-bottom: 0px;
+  text-align: left;
+  display: inline-block;
+  width: 60%;
+}
+
+.answers label{
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* HUD */
+
+#hud {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.hud-prefix {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.hud-main-text {
+  text-align: center;
+}
+
+#progressBar {
+  width: 120%;
+  height: 45%;
+  border: 0.3rem solid #56a5eb;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+#progressBarFull {
+  height: 100%;
+  background-color: #56a5eb;
+  width: 0%;
+}
+
+/* LOADER */
+#bottomButton {
+  width: 62%;
+  
+}

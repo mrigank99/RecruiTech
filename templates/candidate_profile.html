@@ -1,0 +1,456 @@
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="static/img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="codepixer">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>RecruiTECH</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="static/styles/linearicons.css">
+			<link rel="stylesheet" href="static/styles/font-awesome.min.css">
+			<link rel="stylesheet" href="static/styles/bootstrap.css">
+			<link rel="stylesheet" href="static/styles/magnific-popup.css">
+			<link rel="stylesheet" href="static/styles/nice-select.css">
+			<link rel="stylesheet" href="static/styles/animate.min.css">
+			<link rel="stylesheet" href="static/styles/owl.carousel.css">
+			<link rel="stylesheet" href="static/styles/main.css">
+		</head>
+		<body>
+
+			   {% include "header.html" %}
+
+
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Build Your Profile
+							</h1>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->
+
+			<!-- Start post Area -->
+			<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+
+				<div class="section-top-border">
+						<div class="row">
+
+							<div class="mt-10 sidebar">
+								<div class="single-slidebar" id="myScrollspy" style="width: 250px; height: 100%; position: fixed; z-index: 1; top: 100px; left: 10px; margin-top: 50px; overflow-x: hidden;">
+									<h4>Form Sections</h4>
+									<ul class="cat-list">
+										<li><a class="justify-content-between d-flex" href="#section1"><p>Candidate details</p></a></li>
+										<li><a class="justify-content-between d-flex" href="#section2"><p>Experience</p></a></li>
+										<li><a class="justify-content-between d-flex" href="#section3"><p>Education</p></a></li>
+										<li><a class="justify-content-between d-flex" href="#section4"><p>Key Projects</p></a></li>
+										<li><a class="justify-content-between d-flex" href="#section5"><p>Certifications and Publications</p></a></li>
+										<li><a class="justify-content-between d-flex" href="#section6"><p>Key Skills and Interests</p></a></li>
+										<li><a class="justify-content-between d-flex" href="#section7"><p>Social Media Details</p></a></li>
+									</ul>
+								</div>
+							</div>
+
+
+							<!--<div class="mt-10" style="float: right; margin-left: 325px; margin-top:-40px;">
+								<button class="genric-btn primary circle arrow" style="height: 40px; font-weight: 1000; font-size: 1.2em;">
+									<a href="{{url_for('photo')}}">
+									Upload photo <span class="lnr lnr-arrow-right"></span>
+									</a>
+								</button>
+							</div>-->
+
+							<div class="col-lg-8 col-md-8"  style="margin-left: 325px">
+								<form action="/photo" method="POST" enctype="multipart/form-data">
+									<h4 class="mb-30">Upload Photo</h4>
+									<p><input type="file"  name="image" id="image" style="height: 40px; font-weight: 1000; font-size: 1.2em;"></p>
+									<p><input type="submit" value="Submit" class="genric-btn primary circle arrow"
+										style="height: 40px; font-weight: 1000; font-size: 1.2em;"></p>
+								</form>
+								<hr style="border: 1px solid lightgray;">
+
+
+							<!--<div class="col-lg-8 col-md-8"  style="margin-left: 325px">-->
+								<form action="{{url_for('add_candidate_details')}}" method="post">
+									<div id="section1">
+										<h4 class="mb-30">Candidate Details</h4>
+										<div class="mt-10">
+											<input type="text" name="first_name" placeholder="First Name" onfocus="this.placeholder = ''"
+												   onblur="this.placeholder = 'First Name'" required class="single-input-primary" value="{{ userDetails.first_name }}">
+										</div>
+
+										<div class="mt-10">
+											<input type="text" name="last_name" placeholder="Last Name" onfocus="this.placeholder = ''"
+												   onblur="this.placeholder = 'Last Name'" required class="single-input-primary" value="{{ userDetails.last_name }}">
+										</div>
+
+										<div class="mt-10">
+											<input type="email" name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''"
+												   onblur="this.placeholder = 'Email address'" required class="single-input-primary" value="{{ userDetails.EMAIL }}">
+										</div>
+
+										<div class="mt-10">
+											<input type="number" name="age" placeholder="Age" onfocus="this.placeholder = ''"
+												   onblur="this.placeholder = 'Age'" required class="single-input-primary" value="{{ userDetails.age }}">
+										</div>
+
+										<div class="mt-10">
+											<input type="number" name="contact" placeholder="Contact" onfocus="this.placeholder = ''"
+												   onblur="this.placeholder = 'Contact'" required class="single-input-primary" value="{{ userDetails.contact }}">
+										</div>
+
+										<div class="input-group-icon mt-10">
+											<input type="text" name="address" placeholder="Address" onfocus="this.placeholder = ''"
+												   onblur="this.placeholder = 'Address'"  class="single-input-primary" value="{{ userDetails.address }}">
+										</div>
+
+										<div class="mt-10">
+										<textarea class="single-textarea" name = "about_me" placeholder="About Me" onfocus="this.placeholder = ''"
+												  onblur="this.placeholder = 'About Me'"  class="single-input-primary" value="{{ userDetails.about_me }}"></textarea>
+										</div>
+
+										<div class="input-group-icon mt-10">
+											<input type="text" name="preference" placeholder="Job Preferences" onfocus="this.placeholder = ''"
+												   onblur="this.placeholder = 'Job Preferences'"  class="single-input-primary" value="{{ userDetails.preference }}">
+										</div>
+
+										<div class="mt-10" style="float: right;">
+											<button class="genric-btn primary circle arrow" style="height: 40px; font-weight: 1000; font-size: 1.2em;"> Submit <span class="lnr lnr-arrow-right"></span></button>
+								    	</div>
+
+										<div class="mt-10" style="float: right;">
+											<button class="genric-btn primary circle arrow" style="height: 40px; font-weight: 1000; font-size: 1.2em;">
+												<a href="{{ url_for('update', id= current_user.id) }}">
+													Update <span class="lnr lnr-arrow-right"></span>
+												</a>
+											</button>
+								    	</div>
+									</div>
+								</form>
+
+								<br> <br>
+								<hr style="border: 1px solid lightgray;">
+
+								<form action="{{url_for('add_candidate_experience')}}" method="post">
+								<div id="section2">
+									<h4 class="mb-30">Experience</h4>
+									<div class="mt-10">
+										<input type="text" name="com_name" placeholder="Company Name" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Company Name'"  class="single-input-primary" value="{{ userExperience.com_name }}">
+									</div>
+
+									<div class="mt-10">
+										<input type="text" name="com_from_date" placeholder="From" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'From'"  class="single-input-primary" value="{{ userExperience.com_from_date }}">
+									</div>
+
+									<div class="mt-10">
+										<input type="text" name="com_to_date" placeholder="To" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'To'"  class="single-input-primary" value="{{ userExperience.com_to_date }}">
+									</div>
+
+									<div class="mt-10">
+										<input type="text" name="designation" placeholder="Designation" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Designation'"  class="single-input-primary" value="{{ userExperience.designation }}">
+									</div>
+
+									<div class="mt-10">
+										<input type="text" name="department" placeholder="Department" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Department'"  class="single-input-primary" value="{{ userExperience.department }}">
+									</div>
+
+									<div class="mt-10">
+										<textarea class="single-textarea" name = "about_role" placeholder="About the Role" onfocus="this.placeholder = ''"
+												  onblur="this.placeholder = 'About the Role'"  class="single-input-primary" value="{{ userExperience.about_role }}"></textarea>
+									</div>
+
+									<div class="mt-10" style="float: right;">
+											<button class="genric-btn primary circle arrow" style="height: 40px; font-weight: 1000; font-size: 1.2em;">Submit <span class="lnr lnr-arrow-right"></span></button>
+								    </div>
+
+									<div class="mt-10" style="float: right;">
+										<button class="genric-btn primary circle arrow" style="height: 40px; font-weight: 1000; font-size: 1.2em;">
+											<a href="{{ url_for('updateExperience', id= current_user.id) }}">
+												Update <span class="lnr lnr-arrow-right"></span>
+											</a>
+										</button>
+									</div>
+								</div>
+								</form>
+
+								<br><br>
+								<hr style="border: 1px solid lightgray;">
+
+									<form action="{{url_for('add_candidate_education')}}" method="post">
+								<div id="section3">
+									<h4 class="mb-30">Education - College</h4>
+
+									<div class="mt-10">
+										<input type="text" name="degree_level" placeholder="Degree Level" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Degree Level'" required class="single-input-primary" value="{{ userEducation.degree_level }}">
+									</div>
+
+									<div class="mt-10">
+										<input type="text" name="university" placeholder="University/College Name" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'University/School/College Name'" required class="single-input-primary" value="{{ userEducation.university }}">
+									</div>
+
+									<div class="mt-10">
+										<input type="text" name="uni_subject" placeholder="Subject" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Subject'" required class="single-input-primary" value="{{ userEducation.uni_subject }}">
+									</div>
+
+									<div class="mt-10">
+										<input type="text" name="cgpa" placeholder="CGPA" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Subject'" required class="single-input-primary" value="{{ userEducation.cgpa }}">
+									</div>
+
+									<div class="mt-10">
+										<input type="date" name="uni_passing" placeholder="Year Of Passing" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Year Of Passing'" required class="single-input-primary" value="{{ userEducation.uni_passing }}">
+									</div>
+
+									<h4 class="mb-30" style="margin-top:20px;">Education - Senior Secondary</h4>
+
+									<div class="mt-10">
+										<input type="text" name="school" placeholder="School Name" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'University/School/College Name'" required class="single-input-primary" value="{{ userEducation.school }}">
+									</div>
+
+									<div class="mt-10">
+										<input type="text" name="school_subject" placeholder="Subject" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Subject'" required class="single-input-primary" value="{{ userEducation.school_subject }}">
+									</div>
+
+									<div class="mt-10">
+										<input type="text" name="twelth_marks" placeholder="Score" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Subject'" required class="single-input-primary" value="{{ userEducation.twelth_marks }}">
+									</div>
+
+									<div class="mt-10">
+										<input type="date" name="school_passing" placeholder="Year Of Passing" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Year Of Passing'" required class="single-input-primary" value="{{ userEducation.school_passing }}">
+									</div>
+
+									<div class="mt-10" style="float: right;">
+											<button class="genric-btn primary circle arrow" style="height: 40px; font-weight: 1000; font-size: 1.2em;">Submit <span class="lnr lnr-arrow-right"></span></button>
+								    </div>
+
+									<div class="mt-10" style="float: right;">
+										<button class="genric-btn primary circle arrow" style="height: 40px; font-weight: 1000; font-size: 1.2em;">
+											<a href="{{ url_for('updateEducation', id= current_user.id) }}">
+												Update <span class="lnr lnr-arrow-right"></span>
+											</a>
+										</button>
+									</div>
+
+								</div>
+									</form>
+
+								<br><br>
+								<hr style="border: 1px solid lightgray;">
+
+								<form action="{{url_for('add_candidate_project')}}" method="post">
+								<div id="section4">
+									<h4 class="mb-30">Key Projects</h4>
+									<div class="mt-10">
+										<input type="text" name="project_name" placeholder="Name of the Project" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Name of the Project'" required class="single-input-primary" value="{{ userProject.project_name }}">
+									</div>
+									<div class="mt-10">
+										<input type="text" name="field" placeholder="Field of Study" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Field of Study'"  class="single-input-primary" value="{{ userProject.field }}">
+									</div>
+
+									<div class="mt-10">
+										<input type="text" name="from_date_project" placeholder="From" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'From'"  class="single-input-primary" value="{{ userProject.from_date_project }}">
+									</div>
+
+									<div class="mt-10">
+										<input type="text" name="to_date_project" placeholder="To" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'To'"  class="single-input-primary" value="{{ userProject.to_date_project }}">
+									</div>
+
+									<div class="mt-10">
+										<textarea class="single-textarea" name = "project_details" placeholder="About the Project" onfocus="this.placeholder = ''"
+												  onblur="this.placeholder = 'About the Project'"  class="single-input-primary" value="{{ userProject.project_details }}" > </textarea>
+									</div>
+
+									<div class="mt-10" style="float: right;">
+											<button class="genric-btn primary circle arrow" style="height: 40px; font-weight: 1000; font-size: 1.2em;">Submit <span class="lnr lnr-arrow-right"></span></button>
+								    </div>
+
+									<div class="mt-10" style="float: right;">
+										<button class="genric-btn primary circle arrow" style="height: 40px; font-weight: 1000; font-size: 1.2em;">
+											<a href="{{ url_for('updateProject', id= current_user.id) }}">
+												Update <span class="lnr lnr-arrow-right"></span>
+											</a>
+										</button>
+									</div>
+
+								</div>
+								</form>
+
+								<br><br>
+								<hr style="border: 1px solid lightgray;">
+
+								<form action="{{url_for('add_candidate_certificate')}}" method="post">
+								<div id="section5">
+									<h4 class="mb-30">Certifications and Publications</h4>
+									<div class="mt-10">
+										<input type="text" name="certificate" placeholder="Name of the Certificate" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Name of the Certificate'" required class="single-input-primary" value="{{ userCertificate.certificate }}">
+									</div>
+
+									<div class="mt-10">
+										<input type="text" name="issue" placeholder="Issuing Authority" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Issuing Authority'"  class="single-input-primary" value="{{ userCertificate.issue }}">
+									</div>
+
+									<div class="mt-10">
+										<input type="number" name="serial" placeholder="Serial Number" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Serial Number'"  class="single-input-primary" value="{{ userCertificate.serial }}">
+									</div>
+
+									<div class="mt-10">
+										<input type="date" name="certificate_date" placeholder="Date" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Date'"  class="single-input-primary" value="{{ userCertificate.certificate_date }}">
+									</div>
+
+									<div class="mt-10" style="float: right;">
+											<button class="genric-btn primary circle arrow" style="height: 40px; font-weight: 1000; font-size: 1.2em;">Submit <span class="lnr lnr-arrow-right"></span></button>
+								    </div>
+
+									<div class="mt-10" style="float: right;">
+										<button class="genric-btn primary circle arrow" style="height: 40px; font-weight: 1000; font-size: 1.2em;">
+											<a href="{{ url_for('updateCertificate', id= current_user.id) }}">
+												Update <span class="lnr lnr-arrow-right"></span>
+											</a>
+										</button>
+									</div>
+								</div>
+								</form>
+
+								<br><br>
+								<hr style="border: 1px solid lightgray;">
+
+								<form action="{{url_for('add_candidate_skills')}}" method="post">
+								<div id="section6">
+									<h4 class="mb-10">Key Skills and Interests</h4> <h6> (Enter values separated by ",")</h6>
+
+									<div class="mt-10">
+										<input type="text" name="technical" placeholder="Technical Skills" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Technical Skills'" required class="single-input-primary" value="{{ userSkills.technical }}">
+									</div>
+
+									<div class="mt-10">
+										<input type="text" name="interpersonal" placeholder="Interpersonal Skills" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Interpersonal Skills'" required class="single-input-primary" value="{{ userSkills.interpersonal }}">
+									</div>
+
+									<div class="mt-10">
+										<input type="text" name="interest" placeholder="Interests" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Interests'" required class="single-input-primary" value="{{ userSkills.interest }}">
+									</div>
+
+									<div class="mt-10" style="float: right;">
+											<button class="genric-btn primary circle arrow" style="height: 40px; font-weight: 1000; font-size: 1.2em;">Submit <span class="lnr lnr-arrow-right"></span></button>
+								    </div>
+
+									<div class="mt-10" style="float: right;">
+										<button class="genric-btn primary circle arrow" style="height: 40px; font-weight: 1000; font-size: 1.2em;">
+											<a href="{{ url_for('updateSkills', id= current_user.id) }}">
+												Update <span class="lnr lnr-arrow-right"></span>
+											</a>
+										</button>
+									</div>
+
+								</div>
+								</form>
+
+								<br><br>
+								<hr style="border: 1px solid lightgray;">
+
+								<form action="{{url_for('add_social_details')}}" method="post">
+								<div id="section7">
+									<h4 class="mb-10">Social Media Details</h4>
+
+									<div class="mt-10">
+										<input type="text" name="linkedin" placeholder="Linkedin Profile" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Linkedin Profile'" class="single-input-primary" value="{{ userSocial.linkedin }}">
+									</div>
+
+									<div class="mt-10">
+										<input type="text" name="facebook" placeholder="Facebook Profile" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Facebook Profile'" class="single-input-primary" value="{{ userSocial.facebook }}">
+									</div>
+
+									<div class="mt-10">
+										<input type="text" name="twitter" placeholder="Twitter Profile" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Twitter Profile'" class="single-input-primary" value="{{ userSocial.twitter }}">
+									</div>
+
+									<div class="mt-10" style="float: right;">
+											<button class="genric-btn primary circle arrow" style="height: 40px; font-weight: 1000; font-size: 1.2em;">Submit <span class="lnr lnr-arrow-right"></span></button>
+								    </div>
+
+									<div class="mt-10" style="float: right;">
+										<button class="genric-btn primary circle arrow" style="height: 40px; font-weight: 1000; font-size: 1.2em;">
+											<a href="{{ url_for('updateSocial', id= current_user.id) }}">
+												Update <span class="lnr lnr-arrow-right"></span>
+											</a>
+										</button>
+									</div>
+								</div>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</body>
+			<!-- End calto-action Area -->
+
+			    {% include "footer.html" %}
+
+
+
+			<script src="static/js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="static/js/vendor/bootstrap.min.js"></script>
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src="static/js/easing.min.js"></script>
+			<script src="static/js/hoverIntent.js"></script>
+			<script src="static/js/superfish.min.js"></script>
+			<script src="static/js/jquery.ajaxchimp.min.js"></script>
+			<script src="static/js/jquery.magnific-popup.min.js"></script>
+			<script src="static/js/owl.carousel.min.js"></script>
+			<script src="static/js/jquery.sticky.js"></script>
+			<script src="static/js/jquery.nice-select.min.js"></script>
+			<script src="static/js/parallax.min.js"></script>
+			<script src="static/js/mail-script.js"></script>
+			<script src="static/js/main.js"></script>
+		</body>
+	</html>
+
+
+

@@ -1,0 +1,159 @@
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="static/img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="codepixer">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>RecruiTECH</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+			<!--
+			CSS
+			============================================= -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/linearicons.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/font-awesome.min.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/bootstrap.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/magnific-popup.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/nice-select.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/animate.min.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/owl.carousel.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+
+		</head>
+		<body>
+
+
+		{% include "header.html" %}
+
+
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">	
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Job Details				
+							</h1>	
+						</div>											
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->	
+				
+			<!-- Start post Area -->
+			<section class="post-area section-gap">
+				<div class="container">
+					<div class="row justify-content-center d-flex">
+						<div class="col-lg-12 post-list">
+							<div class="single-post d-flex flex-row">
+								<div class="details">
+									<div class="title d-flex flex-row justify-content-between">
+
+										<div class="titles">
+											<h3>{{jdetails.jobName}}</h3>
+											<h4>{{jdetails.department}}</h4>
+										</div>
+
+										<ul class="btns">
+											<li style="width: 200px; text-align: center;"><a href="{{url_for('job_apply', jobid=jobid)}}">Apply</a></li>
+										</ul>
+
+									</div>
+
+									<h5>Job Nature: {{jdetails.jobtype}}</h5>
+									<p class="address"><span class="lnr lnr-map"></span> {{jdetails.location}}</p>
+									<p class="address"><span class="lnr lnr-database"></span> {{ jdetails.minsalary }} - {{ jdetails.maxsalary }}</p>
+									<p class="address"> No. of Openings: {{ jdetails.openings }} </p>
+									<p class="address"> Experience: {{ jdetails.experience }} </p>
+								</div>
+							</div>
+
+							<div class="single-post job-details">
+								<h4 class="single-title">Company Overview</h4>
+								<p style="text-align: justify;">
+									{{ jdetails.about }}
+								</p>
+							</div>
+
+							<div class="single-post job-details">
+								<h4 class="single-title">Job Description</h4>
+								<p style="text-align: justify;">
+									{{ jdetails.jobdescription }}
+								</p>
+							</div>
+
+							<div class="single-post job-experience">
+								<h4 class="single-title">Key Skills</h4>
+								<ul>
+									<li>
+										<span>{{ jdetails.skills }}</span>
+									</li>
+								</ul>
+							</div>
+
+							<div class="single-post job-experience">
+								<h4 class="single-title">Key Qualifications</h4>
+								<ul>
+									<li>
+										<span>{{ jdetails.qualifications }}</span>
+									</li>
+								</ul>
+							</div>
+
+							<div class="single-post job-experience">
+								<h4 class="single-title">Perks</h4>
+								<ul>
+									<li>
+										<span>{{ jdetails.perks }}</span>
+									</li>
+								</ul>
+							</div>
+
+							<div class="single-post job-experience">
+								<h4 class="single-title">Other Requirements</h4>
+								<ul>
+									<li>
+										<span>{{ jdetails.requirements }}</span>
+									</li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+				</div>	
+			</section>
+			<!-- End post Area -->
+
+			 {% include "footer.html" %}
+
+  		<script src="{{ url_for('static', filename='js/vendor/jquery-2.2.4.min.js') }}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="{{ url_for('static', filename='js/vendor/bootstrap.min.js') }}"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+		<script src="{{ url_for('static', filename='js/easing.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/hoverIntent.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/superfish.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.ajaxchimp.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.nice-select.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/parallax.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/mail-script.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+		</body>
+	</html>
+
+
+

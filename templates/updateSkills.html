@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="static/img/fav.png">
+	<!-- Author Meta -->
+	<meta name="author" content="codepixer">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>RecruiTECH</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+		<!--
+		CSS
+		============================================= -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/linearicons.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/font-awesome.min.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/bootstrap.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/magnific-popup.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/nice-select.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/animate.min.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/owl.carousel.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+
+	</head>
+	<body>
+
+		   {% include "header.html" %}
+
+
+		<!-- start banner Area -->
+		<section class="banner-area relative" id="home">
+			<div class="overlay overlay-bg"></div>
+			<div class="container">
+				<div class="row d-flex align-items-center justify-content-center">
+					<div class="about-content col-lg-12">
+						<h1 class="text-white">
+							Update Your Skills
+						</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End banner Area -->
+
+		<!-- Start post Area -->
+		<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+
+			<div class="section-top-border">
+					<div class="row">
+
+
+						<div class="col-lg-8 col-md-8"  style="margin-left: 250px">
+							<form action="{{ url_for('updateSkills', id=new.cid) }}" method="post">
+								<div id="section2">
+									<h4 class="mb-30">Key Skills and Interests</h4>
+									<div class="mt-10">
+										<input type="text" name="technical" placeholder="Technical Skills" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Technical Skills'" required class="single-input-primary" value="{{ new.technical }}">
+									</div>
+
+									<div class="mt-10">
+										<input type="text" name="interpersonal" placeholder="Interpersonal Skills" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Interpersonal Skills'" required class="single-input-primary" value="{{ new.interpersonal }}">
+									</div>
+
+									<div class="mt-10">
+										<input type="text" name="interest" placeholder="Interests" onfocus="this.placeholder = ''"
+											   onblur="this.placeholder = 'Interests'" required class="single-input-primary" value="{{ new.interest }}">
+									</div>
+
+									<div class="mt-10" style="float: right;">
+											<button class="genric-btn primary circle arrow" style="height: 40px; font-weight: 1000; font-size: 1.2em;">Submit <span class="lnr lnr-arrow-right"></span></button>
+								    </div>
+
+								</div>
+								</form>
+
+							<br> <br>
+							<hr style="border: 1px solid lightgray;">
+						</div>
+					</div>
+				</div>
+			</body>
+		<!-- End call to-action Area -->
+
+		 {% include "footer.html" %}
+
+		<script src="{{ url_for('static', filename='js/vendor/jquery-2.2.4.min.js') }}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="{{ url_for('static', filename='js/vendor/bootstrap.min.js') }}"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+		<script src="{{ url_for('static', filename='js/easing.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/hoverIntent.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/superfish.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.ajaxchimp.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.nice-select.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/parallax.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/mail-script.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	</body>
+</html>
+
+
+

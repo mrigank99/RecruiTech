@@ -1,0 +1,134 @@
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="codepixer">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>RecruiTECH - Basic Aptitude Test</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="static/styles/linearicons.css">
+			<link rel="stylesheet" href="static/styles/font-awesome.min.css">
+			<link rel="stylesheet" href="static/styles/bootstrap.css">
+			<link rel="stylesheet" href="static/styles/magnific-popup.css">
+			<link rel="stylesheet" href="static/styles/nice-select.css">
+			<link rel="stylesheet" href="static/styles/animate.min.css">
+			<link rel="stylesheet" href="static/styles/owl.carousel.css">
+			<link rel="stylesheet" href="static/styles/main.css">
+			<link rel="stylesheet" href="static/styles/game_new.css">
+		</head>
+		<body>
+
+			  {% include "header.html" %}
+
+
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">	
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Good Luck {{ current_user.first_name }}
+							</h1>
+						</div>
+						<h4 class="text-white" style="z-index:2" id="TestEnd"></h4>
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->	
+
+
+			<section class="price-area section-gap" id="price">
+				<div class="container">
+					<div class="row">
+				        <div id="hud" class=" d-flex justify-content-between mb-2">
+				          <div id="Questions">
+				            <p id="progressText" class="hud-prefix">
+				              Question
+				            </p>
+				            <div id="progressBar">
+				              <div id="progressBarFull"></div>
+				            </div>
+				          </div>
+				          <div id="score" style="display: none;">
+				            <p class="hud-prefix">
+				              Score
+				            </p>
+				            <h1 class="hud-main-text" id="value">0
+				            </h1>
+				          </div>
+				          <div id="hud-item">
+				            <p class="hud-prefix">
+				              Time
+				            </p>
+				            <h1 class="hud-main-text" id="time">
+				              30
+				            </h1>
+				          </div>
+				        </div>
+					</div>
+					<div class="row mb-4">
+						<div class="col-sm-4 sections" id="one">
+							<h4>Logical Reasoning</h4>
+						</div>
+						<div class="col-sm-4 sections" id= "two">
+							<h4>Numerical Reasoning</h4>
+						</div>
+						<div class="col-sm-4 sections" id="three">
+							<h4>General Apptitude</h4>
+						</div>
+					</div>
+				    
+				  	<div class="row d-flex align-items-left justify-content-left quiz-container">
+				          <div class="container" id="quiz" style="height:auto;">
+				          </div>
+				    </div>
+				 	<br>
+				 	<br>
+
+				</div>
+				<div class="row justify-content-around mt-3" id="bottomButton">
+
+				  	<button class="genric-btn info" id="previous" style="z-index:3;">Previous Question</button>
+					<button class="genric-btn info" id="next" style="z-index:3;">Next Question</button>
+					<button class="genric-btn info" id="submit" style="z-index:3;">Submit Quiz</button>
+				     </div>
+			</section>					
+
+ {% include "footer.html" %}
+
+			<script src="static/js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="static/js/vendor/bootstrap.min.js"></script>
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src="static/js/easing.min.js"></script>
+			<script src="static/js/hoverIntent.js"></script>
+			<script src="static/js/superfish.min.js"></script>
+			<script src="static/js/jquery.ajaxchimp.min.js"></script>
+			<script src="static/js/jquery.magnific-popup.min.js"></script>
+			<script src="static/js/owl.carousel.min.js"></script>
+			<script src="static/js/jquery.sticky.js"></script>
+			<script src="static/js/jquery.nice-select.min.js"></script>
+			<script src="static/js/parallax.min.js"></script>
+			<script src="static/js/mail-script.js"></script>
+			<script src="static/js/main.js"></script>
+			<script src="static/js/game.js"></script>
+		</body>
+	</html>
+
+
+

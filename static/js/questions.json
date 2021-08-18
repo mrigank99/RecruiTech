@@ -1,0 +1,209 @@
+[
+    {
+      "question": "Who invented JavaScript?",
+      "answers": {
+        "A": "Douglas Crockford",
+        "B": "Sheryl Sandberg",
+        "C": "Brendan Eich",
+        "D": "KJ Munro"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "question": "_ is a JavaScript package manager?",
+      "answers": {
+        "A": "Node.js",
+        "B": "TypeScript",
+        "C": "npm",
+        "D": "React.js"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "question": "Which tool can you use to ensure code quality?",
+      "answers": {
+        "A": "Angular",
+        "B": "jQuery",
+        "C": "RequireJS",
+        "D": "ESLint"
+      },
+      "correctAnswer": "D"
+    },
+    {
+      "question": " Safe : Secure :: Protect :",
+      "answers": {
+        "A": "Lock",
+        "B": "Guard",
+        "C": "Sure",
+        "D": "Conserve"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "question": " Look at this series: 80, 10, 70, 15, 60, … What number should come next?",
+      "answers": {
+        "A": "20",
+        "B": "25",
+        "C": "30",
+        "D": "50"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "question": " Which word does NOT belong with the others?",
+      "answers": {
+        "A": "Wing",
+        "B": "Fin",
+        "C": "Beak",
+        "D": "Rudder"
+      },
+      "correctAnswer": "C"
+    },
+    {
+        "question": " Look at this series: 12, 11, 13, 12, 14, 13, … What number should come next?",
+        "answers": {
+          "A": "10",
+          "B": "16",
+          "C": "13",
+          "D": "15"
+        },
+        "correctAnswer": "D"
+      },
+  {
+      "question": "In the university examination, most of the candidates write in Hindi medium.",
+      "answers": {
+        "A": "Some candidates of this examination write in Hindi.",
+        "B": "Mostly candidates with Hindi medium appear in this examination.",
+        "C": "In this examination no candidate writes answers in medium other than Hindi",
+        "D": "All the candidates who appear in this examination write answers in Hindi."
+      },
+      "correctAnswer": "B"
+    },
+  {
+      "question": "Statement: I cannot contact you on phone from Karshik.\n\nAssumptions:\n\nTelephone facility is not available at Karshik.\nNowadays it is difficult to contact on phone.",
+      "answers": {
+        "A": "Only assumption I is implicit",
+        "B": "Only assumption II is implicit\n",
+        "C": "Either I or II is implicit\n",
+        "D": "Neither I nor II is implicit\n"
+      },
+      "correctAnswer": "D"
+    },
+  {
+      "question": "The ratio between the speeds of two trains is 7: 8. If the second train runs 440 kms in 4 hours, then the speed of the first train is:",
+      "answers": {
+        "A": "47.4 km/hr",
+        "B": "57.19 km/hr",
+        "C": "68.13 km/hr",
+        "D": "96.25 km/hr"
+      },
+      "correctAnswer": "D"
+    },
+  {
+      "question": "In covering a distance of 30 km, A takes 2 hours more than B. If A doubles his speed, then he would take 1 hour less than B. A's speed is:",
+      "answers": {
+        "A": "5 km/hr",
+        "B": "8 km/hr",
+        "C": "10 km/hr",
+        "D": "15 km/hr"
+      },
+      "correctAnswer": "A"
+    },
+  {
+      "question": "Excluding stoppages, the speed of a bus is 54 kmph and including stoppages, it is 45 kmph. For how many minutes does the bus stop per hour?",
+      "answers": {
+        "A": "8 min",
+        "B": "5 min",
+        "C": "10 min",
+        "D": "14 min"
+      },
+      "correctAnswer": "C"
+    },
+  {
+      "question": "Twenty women can do a work in sixteen days. Sixteen men can complete the same work in fifteen days. What is the ratio between the capacity of a man and woman?",
+      "answers": {
+        "A": "3:2",
+        "B": "4:3",
+        "C": "5:3",
+        "D": "3:4"
+      },
+      "correctAnswer": "B"
+    },
+  {
+      "question": "A can do a piece of work in 20 days. B is 25% more efficient than A. The number of days taken by B to do the same piece of work is",
+      "answers": {
+        "A": "12 days",
+        "B": "16 days",
+        "C": "18 days",
+        "D": "10 days"
+      },
+      "correctAnswer": "B"
+    },
+  {
+      "question": "A, B and C can do a piece of work in 15 days, 10 days and 6 days respectively. How long will they take to do it, if all the three work together?",
+      "answers": {
+        "A": "7 days",
+        "B": "5 days",
+        "C": "3 days",
+        "D": "2.5 days"
+      },
+      "correctAnswer": "C"
+    },
+  {
+      "question": "How many minimum number of colours will be required to paint all the sides of a cube without the adjacent sides having the same colours ?",
+      "answers": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "correctAnswer": "A"
+    },{
+      "question": "A man takes 6 km distance to go round a rectangular area. If the area of the rectangle is 2 km, find the difference between length and breadth",
+      "answers": {
+        "A": "1 km",
+        "B": "0.5 km",
+        "C": "2 km",
+        "D": "0.75 km"
+      },
+      "correctAnswer": "A"
+    },{
+      "question": "What is the next term in the series : 25, 34, 52,79, 115,?",
+      "answers": {
+        "A": "160",
+        "B": "140",
+        "C": "153",
+        "D": "190"
+      },
+      "correctAnswer": "A"
+    },
+  {
+      "question": "What is 50% of 40% of Rs. 3,450?",
+      "answers": {
+        "A": "Rs 690",
+        "B": "Rs 580",
+        "C": "Rs 670",
+        "D": "Rs 570"
+      },
+      "correctAnswer": "A"
+    },{
+      "question": "If the area of a circle is 75.44 square cm then what is the circumference of the circle?",
+      "answers": {
+        "A": "40.2 cm",
+        "B": "28.9 cm",
+        "C": "29.2 cm",
+        "D": "30.8 cm"
+      },
+      "correctAnswer": "D"
+    },
+  {
+      "question": "A train running at certain speed crosses a stationary engine in 20 seconds. To find out the speed of the train, which of the following information is necessary:",
+      "answers": {
+        "A": "Only the length of the train",
+        "B": "Only the length of the engine",
+        "C": "Either the length of the train or the length of the engine",
+        "D": "Both the length of the train or the length of the engine"
+      },
+      "correctAnswer": "D"
+    }
+]

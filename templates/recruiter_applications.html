@@ -1,0 +1,183 @@
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="static/img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="codepixer">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>RecruiTECH</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="static/styles/linearicons.css">
+			<link rel="stylesheet" href="static/styles/font-awesome.min.css">
+			<link rel="stylesheet" href="static/styles/bootstrap.css">
+			<link rel="stylesheet" href="static/styles/magnific-popup.css">
+			<link rel="stylesheet" href="static/styles/nice-select.css">
+			<link rel="stylesheet" href="static/styles/animate.min.css">
+			<link rel="stylesheet" href="static/styles/owl.carousel.css">
+			<link rel="stylesheet" href="static/styles/main.css">
+		</head>
+		<body>
+
+			 	   {% include "headerrecruiter.html" %}
+
+
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">	
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								View Applications				
+							</h1>	
+						</div>											
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->
+
+			<section class="post-area section-gap" style="padding-bottom: 0px; margin-bottom: 0px;">	
+				<div class="container">
+					<div class="row search-page-top d-flex align-items-center justify-content-center" style="padding: 0px 0px;">
+						<div class="banner-content col-lg-12" style="margin-top: -50px;">
+							<form action="#" class="serach-form-area">
+								<div class="row justify-content-center form-wrap">
+								
+									<div class="col-lg-3 form-cols">
+										<div class="default-select" id="default-selects">
+											<select>
+												<option value="1">Location</option>
+												<option value="2">Mumbai</option>
+												<option value="3">Delhi</option>
+												<option value="4">Bangalore</option>
+												<option value="5">Hyderabad</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="col-lg-3 form-cols">
+										<div class="default-select" id="default-selects">
+											<select>
+												<option value="1">Division</option>
+												<option value="2">IT</option>
+												<option value="3">Advisory</option>
+												<option value="4">Tax</option>
+												<option value="5">Legal</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="col-lg-3 form-cols">
+										<div class="default-select" id="default-selects2">
+											<select>
+												<option value="1">Department</option>
+												<option value="2">Finance</option>
+												<option value="3">HR</option>
+												<option value="4">Marketing</option>
+												<option value="5">BIA</option>
+												<option value="5">Engineering</option>
+											</select>
+										</div>										
+									</div>
+
+									<div class="col-lg-2 form-cols">
+									    <button type="button" class="btn btn-info">
+									      <span class="lnr lnr-magnifier"></span> Search
+									    </button>
+									</div>								
+								</div>
+							</form>	
+						</div>
+					</div>
+				</div>
+			</section>	
+			
+			<!-- Start post Area -->
+			<section class="post-area section-gap">
+				<div class="container">
+					<div class="row justify-content-center d-flex">
+						<div class="col-lg-8 post-list">
+							{% if jobPost is none %}
+								<h1>You have not posted any Jobs</h1>
+							{% else %}
+								{% for item in jobPost %}
+								<div class="single-post d-flex flex-row">
+									<div class="details">
+										<div class="title d-flex flex-row justify-content-between">
+											<div class="titles">
+												<p style="font-size: 18px; font-weight: bold; color: black;">{{ item.department }} <span class="lnr lnr-arrow-right"></span> {{ item.jobName }}</p>
+											</div>
+
+											<ul class="btns" style="margin-left:100px;">
+												<li><a href={{url_for('recruiter_single_application',jobid=item.id)}}> View </a></li>
+												<li><a href="{{url_for('recruiter_delete_application',jobid=item.id)}}"> Delete </a></li>
+											</ul>
+										</div>
+
+										<p>
+											Job Description: {{ item.jobdescription }} </p>
+
+											<p> Last Date of Application: {{ item.postingdate }} </p>
+
+										<p class="address"><span class="lnr lnr-map"></span> Location: {{ item.location }}</p>
+									</div>
+								</div>
+								{% endfor %}
+
+							{% endif %}
+						</div>
+						<div class="col-lg-4 sidebar">
+
+							<div class="single-slidebar">
+								<h4>Listings by Location</h4>
+								<ul class="cat-list">
+									<li><a class="justify-content-between d-flex" href="#"><p>New York</p><span>37</span></a></li>
+									<li><a class="justify-content-between d-flex" href="#"><p>Park Montana</p><span>57</span></a></li>
+									<li><a class="justify-content-between d-flex" href="#"><p>Atlanta</p><span>33</span></a></li>
+									<li><a class="justify-content-between d-flex" href="#"><p>Arizona</p><span>36</span></a></li>
+									<li><a class="justify-content-between d-flex" href="#"><p>Florida</p><span>47</span></a></li>
+									<li><a class="justify-content-between d-flex" href="#"><p>Rocky Beach</p><span>27</span></a></li>
+									<li><a class="justify-content-between d-flex" href="#"><p>Chicago</p><span>17</span></a></li>
+								</ul>
+							</div>							
+					</div>
+				</div>	
+			</section>
+			<!-- End post Area -->
+
+			 {% include "footer.html" %}
+			<!-- End footer Area -->		
+
+			<script src="static/js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="static/js/vendor/bootstrap.min.js"></script>
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src="static/js/easing.min.js"></script>
+			<script src="static/js/hoverIntent.js"></script>
+			<script src="static/js/superfish.min.js"></script>
+			<script src="static/js/jquery.ajaxchimp.min.js"></script>
+			<script src="static/js/jquery.magnific-popup.min.js"></script>
+			<script src="static/js/owl.carousel.min.js"></script>
+			<script src="static/js/jquery.sticky.js"></script>
+			<script src="static/js/jquery.nice-select.min.js"></script>
+			<script src="static/js/parallax.min.js"></script>
+			<script src="static/js/mail-script.js"></script>
+			<script src="static/js/main.js"></script>
+		</body>
+	</html>
+
+
+
